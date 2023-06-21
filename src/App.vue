@@ -1,16 +1,18 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png">
-  <Contador titulo="Estudiante" valor2="7"/>
+  <Calculadora/>
+  <!--<Contador titulo="Estudiante" valor2="7"/>
   <Contador titulo="Profesor" valor2="7"/>
-  <Contador titulo="Test Titulo" valor2="7"/>
+  <Contador titulo="Test Titulo" valor2="7"/>-->
 </template>
 <script>
-import Contador from './components/Contador.vue'
+/*import Contador from './components/Contador.vue'*/
+import Calculadora from './components/Calculadora.vue'
 
 export default {
   name: 'App',
   components: {
-    Contador 
+    Calculadora 
   }
 }
 </script>
@@ -22,5 +24,9 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+
+img {
+  width: 150px;
 }
 </style>
