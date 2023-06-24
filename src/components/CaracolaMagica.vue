@@ -1,5 +1,5 @@
 <template>
-  <h1>Caracola Mágica</h1>
+  
   <img
     v-if="imagen"
     :src="imagen"
@@ -7,10 +7,12 @@
   /><br />
   <div class="bg-dark"></div>
   <div class="contenedor">
+    <h1>Caracola Mágica</h1>
     <input type="text" placeholder="Hazme una pregunta" v-model="pregunta" />
     <p>Recuerda Terminar con el signo "?"</p>
     <div>
       <h2>{{ pregunta }}</h2>
+      <h2>{{ mensaje }}</h2>
       <h1>{{ respuesta }}</h1>
     </div>
   </div>
@@ -20,6 +22,7 @@
 export default {
   data() {
     return {
+      mensaje: "",
       pregunta: "",
       respuesta: "",
       imagen: null,
@@ -31,7 +34,9 @@ export default {
       console.log(oldValue);
       if (value.includes("?")) {
         console.log("Consumir el API");
+        //this.mensaje = 'Pensando...';
         this.consumirAPI();
+        this.respuesta = '';
       }
     },
   },
@@ -40,6 +45,7 @@ export default {
       const respuesta = await fetch("https://yesno.wtf/api").then((r) =>
         r.json()
       );
+      this.mensaje = "Pensando..."
       const { answer, image } = respuesta;
       this.respuesta = answer;
       this.imagen = image;
