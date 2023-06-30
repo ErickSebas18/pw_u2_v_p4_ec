@@ -34,7 +34,7 @@ export default {
       console.log(oldValue);
       if (value.includes("?")) {
         console.log("Consumir el API");
-        //this.mensaje = 'Pensando...';
+        this.mensaje = 'Pensando...';
         this.consumirAPI();
         this.respuesta = '';
       }
@@ -45,7 +45,6 @@ export default {
       const respuesta = await fetch("https://yesno.wtf/api").then((r) =>
         r.json()
       );
-      this.mensaje = "Pensando..."
       const { answer, image } = respuesta;
       this.respuesta = answer;
       this.imagen = image;

@@ -1,20 +1,24 @@
 <template>
   <div class="container">
     <ul>
-      <li>1</li>
-      <li>2</li>
-      <li>3</li>
-      <li>4</li>
+      <li v-for="pokemon in opciones" :key="pokemon.id"> {{ pokemon.nombre }}</li>
     </ul>
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+  props: {
+    opciones: {
+      type: Array,
+      required: true,
+    },
+  },
+};
 </script>
 
 <style scoped>
-.container{
+.container {
   display: flex;
   justify-content: center;
 }
@@ -32,6 +36,6 @@ li {
 
 li:hover {
   background-color: aqua;
+  transform: scale(1.1);
 }
-
 </style>
