@@ -1,13 +1,29 @@
 <template>
   <div class="container">
     <ul>
-      <li v-for="pokemon in opciones" :key="pokemon.id"> {{ pokemon.nombre }}</li>
+      <li
+        v-for="pokemon in opciones"
+        :key="pokemon.id"
+        @click="$emit('seleccionar', pokemon.id)"
+      >
+        {{ pokemon.nombre }}
+      </li>
     </ul>
   </div>
 </template>
 
 <script>
 export default {
+  data() {
+    return {
+      correcto: false,
+    };
+  },
+  methods: {
+    eleccion() {
+      console.log("prueba de evento");
+    },
+  },
   props: {
     opciones: {
       type: Array,
