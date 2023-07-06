@@ -1,3 +1,5 @@
-html, body {
-    background-color: white;
+body {
+    background-image: url("https://img.freepik.com/premium-vector/abstract-blue-background-with-sun-ray_186380-1610.jpg?w=2000");
+    background-size: cover;
+    background-repeat: no-repeat;
 }

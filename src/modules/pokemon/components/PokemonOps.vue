@@ -47,6 +47,7 @@ li {
   background-color: antiquewhite;
   margin-bottom: 10px;
   width: 200px;
+  padding: 15px;
   cursor: pointer;
 }
 

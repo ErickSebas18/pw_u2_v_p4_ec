@@ -2,7 +2,7 @@
   <!--<img alt="Vue logo" src="./assets/logo.png" />
   <Contador titulo="Estudiante" v-bind:inicio="105" />
   <Contador titulo="Profesor" :inicio="101"/>-->
-  <PokemonPage/>
+  <PokemonPage />
 </template>
 <script>
 //import Contador from "./components/Contador.vue";
@@ -17,6 +17,9 @@ export default {
 </script>
 <style>
 #app {
+  
+  align-items: center;
+  justify-content: center;
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
